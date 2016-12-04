@@ -1,6 +1,7 @@
 class CreatePlutusTables < ActiveRecord::Migration
   def self.up
     create_table :plutus_accounts do |t|
+      t.string :code
       t.string :name
       t.string :type
       t.boolean :contra
