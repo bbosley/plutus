@@ -8,7 +8,7 @@ class CreatePlutusTables < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :plutus_accounts, [:name, :type]
+    add_index :plutus_accounts, [:code, :name, :type]
 
     create_table :plutus_entries do |t|
       t.string :description
